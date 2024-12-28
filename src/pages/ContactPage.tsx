@@ -98,10 +98,10 @@ export function ContactPage({ currentLang }: ContactPageProps) {
 
             <div className="h-[300px] rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.4964457744007!2d12.4429!3d41.9067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f!5e0!3m2!1sen!2sit!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.370565834287!2d12.445537!3d41.906392!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f607b922cc751%3A0x7c5e5faea80830ac!2sVia%20Marcantonio%20Bragadin%2C%2075%2C%2000136%20Roma%20RM!5e0!3m2!1sit!2sit!4v1735404408473!5m2!1sit!2sit"
                 width="100%"
                 height="100%"
-                style={{ border: 0 }}
+                className="border-0 w-full h-full"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
