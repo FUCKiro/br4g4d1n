@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useForm } from '@formspree/react';
 import { Language } from '../types';
 
 const content = {
@@ -12,7 +12,8 @@ const content = {
     emailPlaceholder: 'your@email.com',
     messagePlaceholder: 'Your message...',
     success: 'Message sent successfully!',
-    error: 'Please fill in all fields and accept the privacy policy',
+    error: 'There was an error sending your message. Please try again.',
+    sending: 'Sending...',
   },
   it: {
     name: 'Nome',
@@ -24,7 +25,8 @@ const content = {
     emailPlaceholder: 'tua@email.com',
     messagePlaceholder: 'Il tuo messaggio...',
     success: 'Messaggio inviato con successo!',
-    error: 'Compila tutti i campi e accetta la privacy policy',
+    error: 'Si è verificato un errore nell\'invio del messaggio. Riprova.',
+    sending: 'Invio in corso...',
   },
 };
 
@@ -33,25 +35,7 @@ interface ContactFormProps {
 }
 
 export function ContactForm({ currentLang }: ContactFormProps) {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    acceptPrivacy: false,
-  });
-  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message || !formData.acceptPrivacy) {
-      setStatus('error');
-      return;
-    }
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    setStatus('success');
-    setFormData({ name: '', email: '', message: '', acceptPrivacy: false });
-  };
+  const [state, handleSubmit] = useForm("xleqnwbk");
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -62,8 +46,8 @@ export function ContactForm({ currentLang }: ContactFormProps) {
         <input
           type="text"
           id="name"
-          value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          name="name"
+          required
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
           placeholder={content[currentLang].namePlaceholder}
         />
@@ -76,8 +60,8 @@ export function ContactForm({ currentLang }: ContactFormProps) {
         <input
           type="email"
           id="email"
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          name="email"
+          required
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
           placeholder={content[currentLang].emailPlaceholder}
         />
@@ -90,8 +74,8 @@ export function ContactForm({ currentLang }: ContactFormProps) {
         <textarea
           id="message"
           rows={4}
-          value={formData.message}
-          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          name="message"
+          required
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
           placeholder={content[currentLang].messagePlaceholder}
         />
@@ -101,8 +85,8 @@ export function ContactForm({ currentLang }: ContactFormProps) {
         <input
           type="checkbox"
           id="privacy"
-          checked={formData.acceptPrivacy}
-          onChange={(e) => setFormData({ ...formData, acceptPrivacy: e.target.checked })}
+          name="privacy"
+          required
           className="mt-1 h-4 w-4 rounded border-gray-300 text-amber-600 focus:ring-amber-500"
         />
         <label htmlFor="privacy" className="ml-2 block text-sm text-gray-700">
@@ -110,15 +94,15 @@ export function ContactForm({ currentLang }: ContactFormProps) {
         </label>
       </div>
 
-      {status === 'error' && (
+      {state.errors && (
         <p className="text-red-600 text-sm">{content[currentLang].error}</p>
       )}
-      {status === 'success' && (
+      {state.succeeded && (
         <p className="text-green-600 text-sm">{content[currentLang].success}</p>
       )}
 
-      <button type="submit" className="btn w-full">
-        {content[currentLang].send}
+      <button type="submit" className="btn w-full" disabled={state.submitting}>
+        {state.submitting ? content[currentLang].sending : content[currentLang].send}
       </button>
     </form>
   );
