@@ -2,6 +2,8 @@ import { Language } from '../types';
 import { Hero } from '../components/Hero';
 import { services } from '../data/services';
 import { ServiceCard } from '../components/ServiceCard';
+import { HomeGallery } from '../components/HomeGallery';
+import { WelcomeVideo } from '../components/WelcomeVideo';
 import { MapPin } from 'lucide-react';
 
 const content = {
@@ -37,6 +39,9 @@ export function HomePage({ currentLang }: HomePageProps) {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {content[currentLang].description}
           </p>
+          <div className="mt-12">
+            <WelcomeVideo />
+          </div>
         </div>
 
         <div className="bg-amber-50 rounded-lg p-8 mb-16">

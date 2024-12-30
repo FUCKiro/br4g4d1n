@@ -13,11 +13,11 @@ export const rooms: Room[] = [
       it: 'Spaziosa camera tripla con un comodo letto matrimoniale e un letto singolo, completa di bagno privato. Perfetta per famiglie o piccoli gruppi.',
     },
     images: [
-      'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80', // Main room view
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80', // Bed detail
-      'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80', // Window view
-      'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?auto=format&fit=crop&q=80', // Bathroom
-      'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&q=80', // Amenities
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404162/SIM06851-HDR-1-scaled_xoeaue.jpg',
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404158/SIM06830-HDR-scaled_hvgbex.jpg',
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404159/SIM06851-HDR-scaled_ivkjgv.jpg',
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404157/SIM06809-HDR-scaled_bvcguq.jpg',
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404157/bagno1-scaled_y6cmj7.jpg'
     ],
   },
   {
@@ -33,11 +33,11 @@ export const rooms: Room[] = [
       it: 'Affascinante camera tripla con letto matrimoniale e letto singolo, dotata di un bellissimo balcone. Bagno in comune con servizi moderni.',
     },
     images: [
-      'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80', // Main room view
-      'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?auto=format&fit=crop&q=80', // Balcony view
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80', // Bed detail
-      'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&q=80', // Bathroom
-      'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80', // Amenities
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404155/SIM06710-HDR-scaled_ehw6re.jpg',
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404156/SIM06701-HDR-scaled_pq3xts.jpg',
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404158/SIM06731-HDR-scaled_ez0avj.jpg',
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404159/SIM06704-HDR-scaled_jl07ra.jpg',
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404157/SIM06722-HDR-scaled_fvgjaf.jpg'
     ],
   },
   {
@@ -52,11 +52,10 @@ export const rooms: Room[] = [
       it: 'Accogliente camera doppia con comodo letto matrimoniale, perfetta per le coppie. Bagno in comune con servizi moderni.',
     },
     images: [
-      'https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&q=80', // Main room view
-      'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80', // Bed detail
-      'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?auto=format&fit=crop&q=80', // Window view
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80', // Bathroom
-      'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&q=80', // Amenities
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404159/SIM06749-HDR-scaled_pkcaai.jpg',
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404159/SIM06752-HDR-scaled_ya1cjp.jpg',
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404160/SIM06773-HDR-scaled_bjo3ko.jpg',
+      'https://res.cloudinary.com/dlc5g3cjb/image/upload/v1735404160/SIM06776-HDR-scaled_owibnq.jpg'
     ],
   },
 ];

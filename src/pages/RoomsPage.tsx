@@ -2,18 +2,21 @@ import { Language } from '../types';
 import { rooms } from '../data/rooms';
 import { services } from '../data/services';
 import { RoomCard } from '../components/RoomCard';
+import { HomeGallery } from '../components/HomeGallery';
 import { ServiceCard } from '../components/ServiceCard';
 
 const content = {
   en: {
     title: 'Our Rooms',
     description: 'Choose from our selection of comfortable and well-appointed rooms, each designed to make your stay in Rome unforgettable.',
+    gallery: 'Photo Gallery',
     servicesTitle: 'Room Amenities & Services',
     servicesDescription: 'Discover the amenities and services we offer to make your stay comfortable and memorable.',
   },
   it: {
     title: 'Le Nostre Camere',
     description: 'Scegli tra la nostra selezione di camere confortevoli e ben arredate, ognuna progettata per rendere il tuo soggiorno a Roma indimenticabile.',
+    gallery: 'Galleria Fotografica',
     servicesTitle: 'Servizi e Comfort',
     servicesDescription: 'Scopri i comfort e i servizi che offriamo per rendere il tuo soggiorno confortevole e memorabile.',
   },
@@ -38,6 +41,15 @@ export function RoomsPage({ currentLang }: RoomsPageProps) {
         {rooms.map((room) => (
           <RoomCard key={room.id} room={room} currentLang={currentLang} />
         ))}
+      </div>
+      
+      <div className="mt-32">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-serif text-gray-900 mb-4">
+            {content[currentLang].gallery}
+          </h2>
+        </div>
+        <HomeGallery />
       </div>
       
       <div className="mt-32">
