@@ -68,8 +68,9 @@ export function ContactPage({ currentLang }: ContactPageProps) {
               </h2>
               <p className="text-gray-600">
                 <a href="tel:+39123456789" className="hover:text-amber-600">
-                  +39 123 456 789
+                (+39) 339-450 3280
                 </a>
+                <span className="ml-2 text-sm text-gray-500">(Piero)</span>
               </p>
             </div>
             
@@ -79,8 +80,8 @@ export function ContactPage({ currentLang }: ContactPageProps) {
                 {content[currentLang].emailTitle}
               </h2>
               <p className="text-gray-600">
-                <a href="mailto:info@bragadin75.com" className="hover:text-amber-600">
-                  info@bragadin75.com
+                <a href="mailto:bragadin75@gmail.com" className="hover:text-amber-600">
+                  bragadin75@gmail.com
                 </a>
               </p>
             </div>
