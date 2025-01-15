@@ -66,7 +66,7 @@ export function WelcomeVideo() {
         preload="metadata"
       >
         <source
-          src="https://res.cloudinary.com/dlc5g3cjb/video/upload/v1735567388/6982417e-d790-4fd1-a02b-c5a0c166dd9e_zlochv.mov"
+          src="https://res.cloudinary.com/dlc5g3cjb/video/upload/v1736958322/6982417e-d790-4fd1-a02b-c5a0c166dd9e_fqqeoj.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
